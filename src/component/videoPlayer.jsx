@@ -1,12 +1,15 @@
 import { fakeData } from '../fakeData';
 import '../style/videoPlayer.css';
 
-function VideoPlayer() {
+function VideoPlayer({ video }) {
+  if (!video) { return '비디오 없음'; }
   return (
     <section className="player">
-      <iframe src={`https://www.youtube.com/embed/${fakeData[0].id.videoId}`} />
-      <h1>{fakeData[0].snippet.title}</h1>
-      <p>{fakeData[0].snippet.description}</p>
+      <div className="screen-container">
+        <iframe className="player__screen" src={`https://www.youtube.com/embed/${video.id.videoId}`} allowFullScreen />
+      </div>
+      <h1 className="player__title">{video.snippet.title}</h1>
+      <p className="player__description">{video.snippet.description}</p>
     </section>
   );
 }

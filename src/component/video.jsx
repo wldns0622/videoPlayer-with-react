@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import { fakeData } from '../fakeData';
 import '../style/video.css';
 
-function Video() {
+function Video({ video }) {
   return (
     <li className="video">
-      <img className="video__img" src={fakeData[0].snippet.thumbnails.default.url} />
-      <h3 className="video__title">{fakeData[0].snippet.title}</h3>
+      <img className="video__img" src={video.snippet.thumbnails.default.url} />
+      <h3 className="video__title">{video.snippet.title}</h3>
     </li>
   );
 }

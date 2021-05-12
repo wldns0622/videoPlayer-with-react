@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '@fortawesome/fontawesome-free/js/all.js';
 import '../style/navBar.css';
 
 class NavBar extends Component {

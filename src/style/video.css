@@ -1,14 +1,14 @@
 .video {
   list-style: none;
   border-radius: 10px;
-  width: 200px;
+  width: 100%;
   background-color: #9055A2;
   padding: 10px;
   margin: 10px;
 }
 
 .video__img {
-  width: 200px;
+  width: 100%;
 }
 
 .video__title {

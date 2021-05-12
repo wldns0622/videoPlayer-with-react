@@ -1,10 +1,11 @@
 import { fakeData } from '../fakeData';
+import '../style/videoList.css';
 import Video from './video';
 
-function VideoList() {
+function VideoList({ videos }) {
   return (
     <ul className="videoList">
-      { fakeData.map((video) => <Video />)}
+      { videos.map((video) => <Video key={video.etag} video={video} />)}
     </ul>
   );
 }
